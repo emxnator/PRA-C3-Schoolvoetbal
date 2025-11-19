@@ -20,7 +20,7 @@
         <div class="dropdown-content">
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('signup') }}">Sign Up</a>
-            <a href="{{ route('admin') }}">Admin</a>
+            <a href="{{ route('admin') }}">Admin Panel</a>
         </div>
     </div>
 </nav>

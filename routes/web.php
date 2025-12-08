@@ -8,25 +8,25 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 })->name('login');
 
 Route::get('/signup', function () {
-    return view('signup');
+    return view('auth.register');
 })->name('signup');
 
 Route::get('/toernooien', [TournamentController::class, 'index'])->name('toernooien');
 
 Route::get('/contact', function () {
-    return view('contact.page');
+    return view('pages.contact');
 })->name('contact');
 
 Route::get('/teams', function () {
-    return view('teams');
+    return view('teams.index');
 })->name('teams');
 
 Route::get('/admin', function () {
-    return view('admin');
+    return view('admin.index');
 })->name('admin');
 
 Route::get('/dashboard', function () {

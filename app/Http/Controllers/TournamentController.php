@@ -16,7 +16,7 @@ class TournamentController extends Controller
             ->orderBy('datum', 'asc')
             ->get();
         
-        return view('tooernooien', compact('tournaments'));
+        return view('tournaments.index', compact('tournaments'));
     }
 
     /**

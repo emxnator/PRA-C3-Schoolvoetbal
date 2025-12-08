@@ -24,7 +24,7 @@ class HomeController extends Controller
         $totalTeams = Team::count();
         $totalTournaments = Tournament::where('archived', false)->count();
         
-        return view('home', compact('upcomingTournaments', 'totalSchools', 'totalTeams', 'totalTournaments'));
+        return view('pages.home', compact('upcomingTournaments', 'totalSchools', 'totalTeams', 'totalTournaments'));
     }
 
     /**

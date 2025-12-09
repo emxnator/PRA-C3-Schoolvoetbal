@@ -19,7 +19,6 @@
         <div class="dropdown">
             <button class="dropbtn">{{ Auth::user()->name }} ▼</button>
             <div class="dropdown-content">
-                <a href="{{ route('dashboard') }}">Dashboard</a>
                 @if(Auth::user()->is_admin)
                     <a href="{{ route('admin') }}">Admin Panel</a>
                 @endif

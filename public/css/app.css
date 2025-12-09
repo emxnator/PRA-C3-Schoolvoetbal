@@ -67,26 +67,40 @@ nav a:hover {
     display: none;
     position: absolute;
     background-color: #2d1b3d;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1000;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 0;
+    padding-top: 5px;
+}
+
+.dropdown-content a,
+.dropdown-content form {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0;
 }
 
 .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    padding: 12px 20px;
     border-radius: 0;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content form a {
+    padding: 12px 20px;
+    display: block;
+    width: 100%;
 }
 
 .dropdown-content a:first-child {
     border-radius: 5px 5px 0 0;
 }
 
-.dropdown-content a:last-child {
+.dropdown-content a:last-child,
+.dropdown-content form:last-child a {
     border-radius: 0 0 5px 5px;
 }
 
@@ -387,4 +401,87 @@ footer {
 .no-tournaments p {
     font-size: 1.2em;
     color: #666;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.admin-panel h1 {
+    text-align: center;
+    color: #8a2be2;
+    margin-bottom: 40px;
+}
+
+.admin-section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.admin-section h2 {
+    color: #4b0082;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #8a2be2;
+    padding-bottom: 10px;
+}
+
+.users-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table thead {
+    background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
+    color: white;
+}
+
+.users-table th,
+.users-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.users-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.users-table tbody tr:hover {
+    background: #f8f3ff;
+}
+
+.badge-admin,
+.badge-user {
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+}
+
+.badge-admin { background: #8a2be2; }
+.badge-user { background: #6c757d; }
+
+.btn-toggle-admin {
+    background: #8a2be2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.btn-toggle-admin:hover {
+    background: #7b1fa2;
+}
+
+.total-users {
+    text-align: right;
+    color: #4b0082;
+    margin-top: 15px;
 }

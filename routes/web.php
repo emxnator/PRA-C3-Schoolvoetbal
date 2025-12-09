@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TournamentController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -25,13 +26,10 @@ Route::get('/teams', function () {
     return view('teams.index');
 })->name('teams');
 
-Route::get('/admin', function () {
-    return view('admin.index');
-})->name('admin');
+Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
+Route::patch('/admin/toggle/{id}', [AdminController::class, 'toggleAdmin'])->middleware(['auth', 'admin'])->name('admin.toggle');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

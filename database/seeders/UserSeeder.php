@@ -17,9 +17,10 @@ class UserSeeder extends Seeder
         // Admin user
         User::create([
             'name' => 'Admin User',
-            'email' => 'admin@schoolvoetbal.nl',
+            'email' => 'admin@school.nl',
             'password' => Hash::make('password'),
             'is_admin' => true,
+            'is_super_admin' => true,
             'phonenumber' => '0612345678',
         ]);
 
@@ -27,7 +28,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'John Doe',
             'email' => 'john@example.nl',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('john123'),
             'is_admin' => false,
             'phonenumber' => '0687654321',
         ]);

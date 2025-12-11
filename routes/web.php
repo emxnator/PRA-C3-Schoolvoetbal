@@ -37,3 +37,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/information', function () {
+    return view('pages.information');
+})->name('information');

@@ -9,6 +9,7 @@
 </head>
 <body>
 <header>
+    <img src="{{ asset('/../../img/PaasToernooi.png') }}" alt="Logo" class="logo">
 <nav>
     <a href="{{ route('home') }}">Home</a>
     <a href="{{ route('toernooien') }}">Toernooien</a>

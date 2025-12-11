@@ -498,7 +498,10 @@ footer {
     font-size: 0.9em;
     transition: background 0.3s ease;
 }
-
+.footer-contact {
+    width: 45%;
+    text-align: center;
+}
 header {
     display: flex;
     align-items: center;  /* aligns logo + links vertically */

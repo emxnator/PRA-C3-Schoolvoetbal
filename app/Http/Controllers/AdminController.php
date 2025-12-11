@@ -83,6 +83,18 @@ class AdminController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        if (!Auth::user()->is_super_admin) {
+            return back();
+        }
+
+        $user = User::findOrFail($id);
+
+        if ($user->id === Auth::id()) {
+            return back();
+        }
+
+        $user->delete();
+
+        return back();
     }
 }

@@ -27,6 +27,7 @@ Route::get('/teams', function () {
 })->name('teams');
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
+route::delete('/admin/{id}', [AdminController::class, 'destroy'])->middleware(['auth', 'admin'])->name('admin.destroy');
 Route::patch('/admin/toggle/{id}', [AdminController::class, 'toggleAdmin'])->middleware(['auth', 'admin'])->name('admin.toggle');
 
 

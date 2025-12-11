@@ -455,6 +455,7 @@ footer {
 }
 
 .badge-admin,
+.badge-super-admin,
 .badge-user {
     color: white;
     padding: 5px 15px;
@@ -464,6 +465,7 @@ footer {
 
 .badge-admin { background: #8a2be2; }
 .badge-user { background: #6c757d; }
+.badge-super-admin { background: #4b0082; }
 
 .btn-toggle-admin {
     background: #8a2be2;
@@ -484,4 +486,15 @@ footer {
     text-align: right;
     color: #4b0082;
     margin-top: 15px;
+}
+
+.AdminDeleteButton {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
 }

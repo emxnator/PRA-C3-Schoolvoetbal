@@ -47,7 +47,26 @@
 {{ $slot }}
 </main>
 <footer>
+    <div class="footer-info">
+        
+        <nav class="footer-nav">
+            <div class="footer-links">
+                <a href="{{ route('home') }}">Home</a>
+                <a href="{{ route('toernooien') }}">Toernooien</a>
+                <a href="{{ route('teams') }}">Teams</a>
+                <a href="{{ route('contact') }}">Contact</a>
+            </div>
 
+            
+            <div class="footer-contact">
+                <p>Tel: +31 06000000</p>
+                <p>Email: info@example.com</p>
+            </div>
+        </nav>
+
+        
+
+    </div>
 </footer>
 </body>
 </html>

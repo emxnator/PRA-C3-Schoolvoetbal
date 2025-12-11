@@ -501,7 +501,7 @@ footer {
 .footer-contact {
     width: 45%;
     text-align: center;
-
+}
 header {
     display: flex;
     align-items: center;  /* aligns logo + links vertically */

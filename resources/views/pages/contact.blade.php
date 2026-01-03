@@ -1,96 +1,146 @@
 <x-base-layout>
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Formulier</title>
+
+<!-- Google Font (zelfde stijl) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+    }
+
+    .page {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .form-card {
+        background: white;
+        width: 650px;
+        padding: 40px;
+        border-radius: 14px;
+        box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+        text-align: center;
+        color: #4d00c8;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #4d00c8;
+        margin-bottom: 6px;
+        display: block;
+        font-size: 15px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: 0.2s;
+        font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #7e2bff;
+        outline: none;
+        box-shadow: 0 0 6px rgba(126, 43, 255, 0.3);
+    }
+
+    .radio-row {
+        display: flex;
+        gap: 40px;
+        margin-top: 6px;
+    }
+
+    .radio-row label {
+        font-weight: 500;
+        color: #222;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+</style>
 </head>
+
 <body>
-    <div class="container">
-<div class="card">
-<h1>Contactpagina</h1>
-<p class="lead">Vul hieronder de contactgegevens in of gebruik het formulier om contact op te nemen.</p>
 
+<div class="page">
+    <div class="form-card">
 
-<!-- Contactformulier -->
-<form id="contactForm" novalidate>
-<div class="full">
-<label for="schoolName">Naam van school</label>
-<input id="schoolName" name="schoolName" type="text" placeholder="Bijv. Basisschool De Meer" required />
+        <h2>Contactformulier</h2>
+
+        <form>
+
+            <div class="form-group">
+                <label>Naam van school</label>
+                <input type="text" placeholder="Schoolnaam">
+            </div>
+
+            <div class="form-group">
+                <label>Naam van adres</label>
+                <input type="text" placeholder="Adres">
+            </div>
+
+            <div class="form-group">
+                <label>Email van coach</label>
+                <input type="email" placeholder="coach@voorbeeld.nl">
+            </div>
+
+            <div class="form-group">
+                <label>Hoeveel teams</label>
+                <input type="number" min="0" placeholder="Aantal teams">
+            </div>
+
+            <div class="form-group">
+                <label>Email van scheidsrechter</label>
+                <input type="email" placeholder="scheids@voorbeeld.nl">
+            </div>
+
+            <div class="form-group">
+                <label>Sport</label>
+                <div class="radio-row">
+                    <label><input type="radio" name="sport" value="voetbal"> Voetbal</label>
+                    <label><input type="radio" name="sport" value="lijnbal"> Lijnbal</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Bericht</label>
+                <textarea rows="5" placeholder="Typ je bericht..."></textarea>
+            </div>
+
+            <button type="submit">Verstuur bericht</button>
+
+        </form>
+
+    </div>
 </div>
 
-
-<div class="full">
-<label for="addressName">Naam van adres / locatie</label>
-<input id="addressName" name="addressName" type="text" placeholder="Bijv. Sportpark Oostveld, Veld 2" required />
-</div>
-
-
-<div>
-<label for="coachEmail">E-mail van contact (de coach)</label>
-<input id="coachEmail" name="coachEmail" type="email" placeholder="coach@school.nl" required />
-<small class="hint">Dit adres wordt gebruikt voor wedstrijdafspraken en updates.</small>
-</div>
-
-
-<div>
-<label for="numTeams">Hoeveel teams</label>
-<input id="numTeams" name="numTeams" type="number" min="0" step="1" placeholder="Bijv. 4" required />
-</div>
-
-
-<div>
-<label for="refName">Naam scheidsrechter</label>
-<input id="refName" name="refName" type="text" placeholder="Bijv. Jan Jansen" />
-</div>
-
-
-<div>
-<label for="refEmail">E-mail scheidsrechter</label>
-<input id="refEmail" name="refEmail" type="email" placeholder="scheids@scheids.nl" />
-</div>
-
-
-<div class="full">
-<label for="sport">Sport</label>
-<select id="sport" name="sport" required>
-<option value="">-- kies een sport --</option>
-<option value="voetbal">Voetbal</option>
-<option value="lijmbal">Lijmbal</option>
-</select>
-</div>
-
-
-<div class="full">
-<label for="message">Bericht (optioneel)</label>
-<textarea id="message" name="message" placeholder="Bericht aan de organisatie / coach / scheidsrechter"></textarea>
-</div>
-
-
-<div class="full actions">
-<button type="submit">Verstuur bericht</button>
-<button type="button" class="secondary" id="previewBtn">Toon samenvatting</button>
-<div style="margin-left:auto;color:var(--muted);font-size:0.9rem" id="status"></div>
-</div>
-</form>
-
-
-<!-- Samenvatting / contactcards -->
-<div class="info" id="summaryArea" aria-live="polite" style="display:none;margin-top:18px">
-<div class="item">
-<strong>Coach contact</strong>
-<div id="summaryCoach">-</div>
-</div>
-<div class="item">
-<strong>Scheidsrechter</strong>
-<div id="summaryRef">-</div>
-</div>
-</div>
-
-
-</div>
-</div>
 </body>
-</html>    
+</html>
+
 </x-base-layout>

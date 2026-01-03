@@ -6,6 +6,7 @@ use App\Http\Controllers\TournamentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\MatchController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -18,6 +19,10 @@ Route::get('/signup', function () {
 })->name('signup');
 
 Route::get('/toernooien', [TournamentController::class, 'index'])->name('toernooien');
+Route::get('/toernooien/{tournament}', [TournamentController::class, 'show'])->name('tournaments.show');
+Route::post('/toernooien/{tournament}/archive', [TournamentController::class, 'archive'])->middleware(['auth', 'admin'])->name('tournaments.archive');
+Route::get('/archief', [TournamentController::class, 'archiveIndex'])->name('tournaments.archiveIndex');
+Route::put('/matches/{match}', [MatchController::class, 'update'])->middleware(['auth', 'admin'])->name('matches.update');
 Route::get('/teams', [TeamController::class, 'index'])->name('teams');
 
 Route::get('/contact', function () {

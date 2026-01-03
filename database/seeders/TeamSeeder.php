@@ -19,16 +19,18 @@ class TeamSeeder extends Seeder
         $pools = Pool::all();
 
         $teams = [
-            // Tournament 1: Voetbal Groep 3/4 (6 teams total, 3 per pool)
+            // Tournament 1: Voetbal Groep 3/4 (8 teams total, 4 per pool)
             // Pool 1 (Poule A)
             ['school_id' => $schools[0]->id, 'referee' => 'Jan de Vries', 'name' => 'De Wilgen A1', 'pool_id' => $pools[0]->id],
             ['school_id' => $schools[1]->id, 'referee' => 'Piet Jansen', 'name' => 'Het Centrum A1', 'pool_id' => $pools[0]->id],
             ['school_id' => $schools[2]->id, 'referee' => 'Klaas Bakker', 'name' => 'De Regenboog A1', 'pool_id' => $pools[0]->id],
+            ['school_id' => $schools[3]->id, 'referee' => 'Hans Mulder', 'name' => 'Sint-Jan A1', 'pool_id' => $pools[0]->id],
             
             // Pool 2 (Poule B)
-            ['school_id' => $schools[3]->id, 'referee' => 'Hans Mulder', 'name' => 'Sint-Jan B1', 'pool_id' => $pools[1]->id],
             ['school_id' => $schools[4]->id, 'referee' => 'Dirk Peters', 'name' => 'De Berk B1', 'pool_id' => $pools[1]->id],
             ['school_id' => $schools[5]->id, 'referee' => 'Tom Visser', 'name' => 'Zuiderhof B1', 'pool_id' => $pools[1]->id],
+            ['school_id' => $schools[6]->id, 'referee' => 'Anna van Dam', 'name' => 'De Kameleon B1', 'pool_id' => $pools[1]->id],
+            ['school_id' => $schools[7]->id, 'referee' => 'Lisa Koster', 'name' => 'Montessori B1', 'pool_id' => $pools[1]->id],
             
             // Tournament 2: Voetbal Groep 5/6 (9 teams total, 3 per pool)
             // Pool 3 (Poule A)

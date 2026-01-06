@@ -13,7 +13,7 @@
 <nav>
     <a href="{{ route('home') }}">Home</a>
     <a href="{{ route('toernooien') }}">Toernooien</a>
-    
+    <a href="{{ route('tournaments.archiveIndex') }}">Archief</a>
     <a href="{{ route('teams') }}">Teams</a>
     <a href="{{ route('information') }}">Informatie</a>
     <a href="{{ route('contact') }}">Contact</a>
@@ -56,7 +56,7 @@
             <div class="footer-links">
                 <a href="{{ route('home') }}">Home</a>
                 <a href="{{ route('toernooien') }}">Toernooien</a>
-               
+                <a href="{{ route('tournaments.archiveIndex') }}">Archief</a>
                 <a href="{{ route('teams') }}">Teams</a>
                 <a href="{{ route('contact') }}">Contact</a>
             </div>

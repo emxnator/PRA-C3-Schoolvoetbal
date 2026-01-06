@@ -22,7 +22,9 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        $schools = \App\Models\School::all();
+        $pools = \App\Models\Pool::all();
+        return view('teams.create', compact('schools', 'pools'));
     }
 
     /**
@@ -30,7 +32,16 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'referee' => 'required|string|max:255',
+            'school_id' => 'required|exists:schools,id',
+            'pool_id' => 'required|exists:pools,id',
+        ]);
+
+        Team::create($validatedData);
+
+        return redirect()->route('teams.index')->with('success', 'Team created successfully.');
     }
 
     /**
@@ -38,7 +49,8 @@ class TeamController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $team = Team::findOrFail($id);
+        return view('show_team', compact('team'));
     }
 
     /**
@@ -62,6 +74,7 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Team::findOrFail($id)->delete();
+        return redirect()->route('teams.index');
     }
 }

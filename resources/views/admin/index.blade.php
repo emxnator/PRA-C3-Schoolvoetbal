@@ -84,5 +84,30 @@
             <p class="no-users">Geen geregistreerde gebruikers</p>
             @endif
         </div>
+
+        <div class="admin-container">
+            <div class="admin-buttons">
+                <a href="{{ route('tournaments.create') }}" class="admin-btn">Maak Toernooi aan</a>
+                <a href="{{ route('teams.create') }}" class="admin-btn">Maak Team aan</a>
+                <a href="{{ route('matches.create') }}" class="admin-btn">Maak Wedstrijd aan</a>
+            </div>
+
+            <div class="admin-index-buttons">
+                <div class="admin-index-btn">
+                    <a href="{{ route('tournaments.index') }}" class="admin-btn">Bekijk Toernooien</a>
+                </div>
+                <div class="admin-index-btn">
+                    <a href="{{ route('teams.index') }}" class="admin-btn">Bekijk Teams</a>
+                </div>
+                <div class="admin-index-btn">
+                    <a href="{{ route('matches.index') }}" class="admin-btn">Bekijk Wedstrijden</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
     </div>
 </x-base-layout>

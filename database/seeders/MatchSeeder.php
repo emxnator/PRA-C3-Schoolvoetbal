@@ -94,5 +94,25 @@ class MatchSeeder extends Seeder
         foreach ($matches as $match) {
             MatchModel::create($match);
         }
+
+        // Simulate pool match results and generate playoffs for tournament 1
+        $this->generatePlayoffsForTournament($tournament1);
+    }
+
+    private function generatePlayoffsForTournament($tournament)
+    {
+        // Simulate all pool matches for this tournament
+        $poolMatches = $tournament->matches()->where('type', 'poule')->get();
+        foreach ($poolMatches as $match) {
+            if (is_null($match->team_1_score)) {
+                $match->update([
+                    'team_1_score' => rand(0, 5),
+                    'team_2_score' => rand(0, 5),
+                ]);
+            }
+        }
+
+        // Generate playoffs
+        $tournament->generatePlayoffs();
     }
 }

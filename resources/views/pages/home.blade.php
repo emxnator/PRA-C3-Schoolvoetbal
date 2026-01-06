@@ -68,7 +68,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
-                <a href="{{ route('toernooien') }}" style="display: inline-block; background: #8a2be2; color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                <a href="{{ route('tournaments.index') }}" style="display: inline-block; background: #8a2be2; color: white; padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold;">
                     Bekijk alle toernooien
                 </a>
             </div>

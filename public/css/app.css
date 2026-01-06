@@ -68,7 +68,7 @@ nav a:hover {
     position: absolute;
     background-color: #2d1b3d;
     min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     border-radius: 5px;
     margin-top: 0;
@@ -172,7 +172,7 @@ footer {
     background: #f8f9fa;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sport-card h2 {
@@ -200,7 +200,7 @@ footer {
     background: white;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
 
@@ -295,14 +295,14 @@ footer {
 .tournament-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tournament-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .tournament-header {
@@ -395,7 +395,7 @@ footer {
     padding: 60px 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .no-tournaments p {
@@ -419,7 +419,7 @@ footer {
 .admin-section {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
 }
 
@@ -463,9 +463,17 @@ footer {
     font-size: 0.85em;
 }
 
-.badge-admin { background: #8a2be2; }
-.badge-user { background: #6c757d; }
-.badge-super-admin { background: #4b0082; }
+.badge-admin {
+    background: #8a2be2;
+}
+
+.badge-user {
+    background: #6c757d;
+}
+
+.badge-super-admin {
+    background: #4b0082;
+}
 
 .btn-toggle-admin {
     background: #8a2be2;
@@ -498,14 +506,18 @@ footer {
     font-size: 0.9em;
     transition: background 0.3s ease;
 }
+
 .footer-contact {
     width: 45%;
     text-align: center;
 }
+
 header {
     display: flex;
-    align-items: center;  /* aligns logo + links vertically */
-    padding: 10px 20px;     /* your original color */
+    align-items: center;
+    /* aligns logo + links vertically */
+    padding: 10px 20px;
+    /* your original color */
 }
 
 header .logo {
@@ -515,13 +527,15 @@ header .logo {
 
 nav {
     display: flex;
-    gap: 20px;             /* space between the links */
+    gap: 20px;
+    /* space between the links */
 }
 
 nav a {
     text-decoration: none;
     font-weight: 600;
 }
+
 .team-date {
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 15px;
@@ -541,22 +555,24 @@ nav a {
 .team-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
+
 .no-teams {
     text-align: center;
     padding: 60px 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .no-teams p {
@@ -569,35 +585,285 @@ nav a {
 }
 
 .wrapper {
-  max-width: 800px;
-  margin: 40px auto 0;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  color: #000000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* nette, zachte shadow */
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 20px;
 }
 
 .section {
-  margin-bottom: 24px;
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .title {
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
-  color: #8a2be2;
-  margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #8a2be2;
+    margin-bottom: 20px;
 }
 
 .subtitle {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 18px;
-  margin-bottom: 8px;
-  color: #8a2be2;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #8a2be2;
 }
 
 .list {
-  margin-left: 20px;
+    margin-left: 20px;
+}
+
+/* Main white admin box spanning full width */
+.admin-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    /* 30px top/bottom, 40px left/right */
+    margin-top: 30px;
+    /* space from top */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Create buttons row */
+.admin-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Index buttons row */
+.admin-index-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Button style */
+.admin-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #8a2be2;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.admin-btn:hover {
+    background-color: #7322c7;
+    transform: translateY(-2px);
+}
+
+/* Equal widths for all buttons in their row */
+.admin-buttons .admin-btn,
+.admin-index-btn {
+    flex: 1;
+}
+
+/* Matches Hero Section */
+.matches-hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.matches-hero-section h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.matches-hero-section p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Matches Grid */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* smaller cards */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Match Card */
+.match-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Match Header */
+.match-header {
+    background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-header h2 {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.match-date {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.85em;
+}
+
+/* Match Details */
+.match-details {
+    padding: 15px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 0.9em;
+}
+
+/* Match Actions */
+.match-actions {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    background: #f8f9fa;
+}
+
+
+
+.btn-delete {
+    display: block;
+    background: white;
+    color: #8a2be2;
+    border: 2px solid #8a2be2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    margin: 10px auto; 
+}
+
+
+.btn-delete:hover {
+    background: #8a2be2;
+    color: white;
+} 
+
+/* Card container */
+.form {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-title::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #8a2be2;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs & select */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #8a2be2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: #7a24cc;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
 }

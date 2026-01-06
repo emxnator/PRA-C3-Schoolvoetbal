@@ -148,7 +148,10 @@ class TournamentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $tournament = Tournament::findOrFail($id);
+        $tournament->delete();
+
+        return redirect()->route('tournaments.index')->with('success', 'Tournament deleted successfully.');
     }
 
     /**

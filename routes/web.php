@@ -27,12 +27,16 @@ Route::get('/teams', [TeamController::class, 'index'])->name('teams');
 Route::resource('/tournaments', TournamentController::class);
 Route::resource('/matches', MatchController::class);
 
+Route::delete('/teams/{id}', [TeamController::class, 'destroy'])->middleware(['auth', 'admin'])->name('teams.destroy');
+Route::get('/teams/create', [TeamController::class, 'create'])->middleware(['auth', 'admin'])->name('teams.create');
+Route::post('/teams', [TeamController::class, 'store'])->middleware(['auth', 'admin'])->name('teams.store');
+
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
-route::delete('/admin/{id}', [AdminController::class, 'destroy'])->middleware(['auth', 'admin'])->name('admin.destroy');
+Route::delete('/admin/{id}', [AdminController::class, 'destroy'])->middleware(['auth', 'admin'])->name('admin.destroy');
 Route::patch('/admin/toggle/{id}', [AdminController::class, 'toggleAdmin'])->middleware(['auth', 'admin'])->name('admin.toggle');
 
 

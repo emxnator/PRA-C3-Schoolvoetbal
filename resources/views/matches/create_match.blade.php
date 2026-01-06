@@ -14,25 +14,6 @@
             @endforeach
         </select>
 
-        <label class="form-label" for="team_1_score">Team 1 Score:</label>
-        <input
-            type="number"
-            name="team_1_score"
-            id="team_1_score"
-            class="form-input"
-            min="0"
-            placeholder="0">
-
-        <label class="form-label" for="team_2_score">Team 2 Score:</label>
-        <input
-            type="number"
-            name="team_2_score"
-            id="team_2_score"
-            class="form-input"
-            min="0"
-            placeholder="0">
-
-
         <label class="form-label" for="team_1_id">Team 1:</label>
         <select class="form-input" id="team_1_id" name="team_1_id" required>
             <option value="">Selecteer Team 1</option>

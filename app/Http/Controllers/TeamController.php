@@ -41,7 +41,7 @@ class TeamController extends Controller
 
         Team::create($validatedData);
 
-        return redirect()->route('teams.index')->with('success', 'Team created successfully.');
+        return redirect()->route('teams')->with('success', 'Team created successfully.');
     }
 
     /**
@@ -75,6 +75,6 @@ class TeamController extends Controller
     public function destroy(string $id)
     {
         Team::findOrFail($id)->delete();
-        return redirect()->route('teams.index');
+        return redirect()->route('teams');
     }
 }
